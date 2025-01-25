@@ -30,5 +30,6 @@ export const palette = {
     lightsteelblue: '#a0aec0',
     palepurple: '#eaddff',
     palered: '#ffd8e4',
+    grey: '#0000000d',
   },
 };

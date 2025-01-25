@@ -1,3 +1,5 @@
+'use client';
+
 import { AutorenewIcon } from './AutorenewIcon';
 import { Cell } from './Cell';
 import { CoatIcon } from './CoatIcon';

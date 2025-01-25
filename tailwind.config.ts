@@ -15,10 +15,16 @@ export default {
         palegoldenrod: '#c4e5b0',
         black: '#000',
         lightsteelblue: '#a0aec0',
+        palepurple: '#eaddff',
+        palered: '#ffd8e4',
+        grey: '#0000000d',
       },
       spacing: {},
       fontFamily: {
         'san-francisco-subheadline-2-semibold': "'SF Pro'",
+      },
+      backgroundImage: {
+        profile_bg: "url('/profile_bg.jpg')",
       },
     },
 
