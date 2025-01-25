@@ -1,17 +1,15 @@
 'use client';
 
+import { Box } from '../components/Box';
 import { Page } from '../components/Page';
 
-import { Box, Grid2, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 
 export default function Suggestions() {
   return (
     <Page>
       <Grid2 display="flex" flexDirection="column" gap={2} size={9}>
-        <Box
-          className="rounded-2xl bg-white flex flex-col p-4 w-full"
-          sx={{ boxShadow: 1 }}
-        >
+        <Box>
           <Typography fontWeight={600} variant="h5">
             Предложения
           </Typography>
