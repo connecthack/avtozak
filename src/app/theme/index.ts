@@ -26,7 +26,7 @@ const theme = createTheme({
   ] as Shadows,
 });
 
-theme.components = getComponents(theme);
+theme.components = getComponents();
 
 theme.typography.h1 = {
   ...theme.typography.h1,
