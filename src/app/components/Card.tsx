@@ -1,5 +1,6 @@
-import { FC, ReactNode } from 'react';
 import { Chip } from './Chip';
+
+import { FC } from 'react';
 import { Typography } from '@mui/material';
 
 type CardPZProps = {
@@ -17,7 +18,7 @@ export const CardPZ: FC<CardPZProps> = ({
   articles,
 }) => (
   <div className="rounded-2xl w-full bg-whitesmoke flex flex-col p-8 gap-4 text-slategray">
-    <Typography variant="body1" fontWeight={600}>
+    <Typography fontWeight={600} variant="body1">
       {name}
     </Typography>
     <div className="text-lightsteelblue">
@@ -39,9 +40,7 @@ export const CardPZ: FC<CardPZProps> = ({
       </div>
     </div>
     <div className="flex flex-wrap gap-1">
-      {articles?.map((article, index) => (
-        <Chip key={index}>{article}</Chip>
-      ))}
+      {articles?.map((article, index) => <Chip key={index}>{article}</Chip>)}
     </div>
   </div>
 );

@@ -1,32 +1,36 @@
-import Link from 'next/link';
 import { AutorenewIcon } from './AutorenewIcon';
 import { Cell } from './Cell';
 import { CoatIcon } from './CoatIcon';
 import { CoatRenewIcon } from './CoatRenewIcon';
 import { HammerIcon } from './HammerIcon';
+
 import { usePathname } from 'next/navigation';
 export const Navbar = () => {
   const currentPath = usePathname();
 
   return (
     <div className="flex flex-col gap-[20px] items-stretch">
-      <Cell to="/" icon={<AutorenewIcon />} selected={currentPath === '/'}>
+      <Cell icon={<AutorenewIcon />} selected={currentPath === '/'} to="/">
         Все обновления
       </Cell>
-      <Cell to="/rfm" icon={<CoatIcon />} selected={currentPath === '/rfm'}>
+      <Cell
+        icon={<CoatIcon />}
+        selected={currentPath === '/suggestions'}
+        to="/suggestions"
+      >
         Предположение РФМ
       </Cell>
       <Cell
-        to="/updates"
         icon={<CoatRenewIcon />}
         selected={currentPath === '/updates'}
+        to="/updates"
       >
         Обновление РФМ
       </Cell>
       <Cell
-        to="/court-update"
         icon={<HammerIcon />}
-        selected={currentPath === '/court-update'}
+        selected={currentPath === '/courts'}
+        to="/courts"
       >
         Обновление суды
       </Cell>

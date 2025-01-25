@@ -4,7 +4,7 @@ import { Page } from '../components/Page';
 
 import { Box, Grid2, Typography } from '@mui/material';
 
-export default function Suggestions() {
+export default function Courts() {
   return (
     <Page>
       <Grid2 display="flex" flexDirection="column" gap={2} size={9}>
@@ -13,7 +13,7 @@ export default function Suggestions() {
           sx={{ boxShadow: 1 }}
         >
           <Typography fontWeight={600} variant="h5">
-            Предложения
+            Обновления
           </Typography>
         </Box>
       </Grid2>

@@ -1,9 +1,9 @@
-import { useMemo } from 'react';
-
 import {
   PrisonerStatusCountsQueryResult,
   usePrisonerStatusCountsQuery,
 } from '../generated';
+
+import { useMemo } from 'react';
 
 type PrisonerStatusCountsNode = NonNullable<
   NonNullable<

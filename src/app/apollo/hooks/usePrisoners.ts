@@ -1,11 +1,12 @@
-import { useMemo } from 'react';
-
 import {
   Airtable_Data_EdgeFilter,
   PrisonersDocument,
   PrisonersQueryResult,
   usePrisonersQuery,
 } from '../generated';
+
+import { useMemo } from 'react';
+
 export type Prisoners = NonNullable<
   NonNullable<NonNullable<ReturnType<typeof usePrisoners>>>['data']
 >;
