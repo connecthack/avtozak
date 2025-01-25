@@ -1,0 +1,39 @@
+fragment PrisonerItem on airtable_data_edge {
+  id
+  created_time
+  name
+  description
+  articles
+  photo
+  coordinates
+  institution_short_name
+  address
+  date_of_arrest
+  address_for_letters
+  date_of_birth
+  age
+  gender
+  region
+  status
+  published
+  interests
+  can_write
+  slug
+  last_sync
+  release_date
+  # featuredImage {
+  #   node {
+  #     mediaItemUrl
+  #   }
+  # }
+}
+
+query prisoners($offset: Int, $filter: airtable_data_edgeFilter) {
+  airtable_data_edgeCollection(first: $offset, filter: $filter) {
+    edges {
+      node {
+        ...PrisonerItem
+      }
+    }
+  }
+}
