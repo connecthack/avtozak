@@ -6,9 +6,10 @@ import { FC, PropsWithChildren } from 'react';
 
 export const Page: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div className="w-full min-h-screen bg-whitesmoke px-4 py-8">
-      <Grid2 display="flex" spacing={2} container>
+    <div className="w-full h-screen px-4 py-8">
+      <Grid2 className="h-full" display="flex" spacing={2} container>
         <Grid2
+          className="h-full"
           display="flex"
           flexDirection="column"
           gap="115px"
@@ -25,7 +26,9 @@ export const Page: FC<PropsWithChildren> = ({ children }) => {
           />
           <Navbar />
         </Grid2>
-        {children}
+        <Grid2 className="h-full" size={9}>
+          {children}
+        </Grid2>
       </Grid2>
     </div>
   );

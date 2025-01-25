@@ -20,8 +20,8 @@ export const CardPZ: FC<CardPZProps> = ({
   location,
   articles,
 }) => (
-  <div className="rounded-2xl w-full bg-whitesmoke hover:bg-grey flex flex-col p-8 gap-4 text-slategray">
-    <Link href={`/prisoner/${id}`}>
+  <div className="rounded-2xl w-full bg-whitesmoke hover:bg-grey flex flex-col p-8 text-slategray">
+    <Link className="flex flex-col flex-1 gap-4" href={`/prisoner/${id}`}>
       <Typography fontWeight={600} variant="body1">
         {name}
       </Typography>
