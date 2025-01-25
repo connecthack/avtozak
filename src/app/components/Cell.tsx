@@ -1,17 +1,20 @@
 import { FC, PropsWithChildren, ReactNode } from 'react';
 import { AutorenewIcon } from './AutorenewIcon';
 import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
 
 type CellProps = {
   icon: ReactNode;
+  to: string;
   selected?: boolean;
 };
 export const Cell: FC<PropsWithChildren<CellProps>> = ({
   children,
   icon,
+  to,
   selected = false,
 }) => (
-  <div className="rounded-[5px]">
+  <Link href={to} className="rounded-[5px]">
     <Box
       sx={{ boxShadow: selected ? 1 : 0 }}
       className={`rounded-lg ${
@@ -32,5 +35,5 @@ export const Cell: FC<PropsWithChildren<CellProps>> = ({
         </Typography>
       </div>
     </Box>
-  </div>
+  </Link>
 );
