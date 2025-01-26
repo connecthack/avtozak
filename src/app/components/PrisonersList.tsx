@@ -15,7 +15,7 @@ export const PrisonersList = () => {
   return (
     <>
       {prisoners?.map(({ node: prisoner }) => (
-        <Grid2 display="flex" key={prisoner.id} size={6}>
+        <Grid2 display="flex" key={prisoner.id} size={{ xs: 12, md: 6 }}>
           <CardPZ
             articles={prisoner.articles}
             birthdate={prisoner.date_of_birth}

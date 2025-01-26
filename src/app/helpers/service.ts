@@ -1,3 +1,5 @@
+import { Prisoner } from '@/app/apollo/hooks/usePrisoners';
+
 export type Update = {
   lastName: string;
   firstName: string;
@@ -5,6 +7,47 @@ export type Update = {
   eventBody: string;
   date: string;
   time: string;
+};
+export type Suggestion = {
+  prisoner: Prisoner;
+  probability: string;
+};
+
+export const getSuggestions = async () => {
+  const data: Suggestion[] = [
+    {
+      prisoner: {
+        id: '1',
+        name: 'Константин Константинович',
+        date_of_birth: '01.01.2000',
+        region: 'Республика Беларусь',
+        articles: [],
+      },
+      probability: 'вероятно',
+    },
+    {
+      prisoner: {
+        id: '1',
+        name: 'Константин Константинович',
+        date_of_birth: '01.01.2000',
+        region: 'Республика Беларусь',
+        articles: [],
+      },
+      probability: 'вероятно',
+    },
+    {
+      prisoner: {
+        id: '1',
+        name: 'Константин Константинович',
+        date_of_birth: '01.01.2000',
+        region: 'Республика Беларусь',
+        articles: [],
+      },
+      probability: 'вероятно',
+    },
+  ];
+
+  return Promise.resolve(data);
 };
 export const getUpdates = async () => {
   const data: Update[] = [

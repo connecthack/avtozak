@@ -13,8 +13,23 @@ export const Navbar = () => {
   const currentPath = usePathname();
 
   return (
-    <Box display="flex" flexDirection="column" justifyContent="space-between">
-      <Box alignItems="center" display="flex" flexDirection="column" gap="20px">
+    <Box
+      bgcolor="whitesmoke"
+      bottom={0}
+      display="flex"
+      flexDirection={{ xs: 'row', md: 'column' }}
+      justifyContent={{ xs: 'space-around', md: 'space-between' }}
+      left={0}
+      padding={{ xs: 2, md: 0 }}
+      position={{ xs: 'fixed', md: 'relative' }}
+      width={{ xs: '100%', md: 'auto' }}
+    >
+      <Box
+        alignItems="center"
+        display="flex"
+        flexDirection={{ xs: 'row', md: 'column' }}
+        gap="20px"
+      >
         <Cell icon={<AutorenewIcon />} selected={currentPath === '/'} to="/">
           Все обновления
         </Cell>

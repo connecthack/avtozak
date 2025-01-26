@@ -28,7 +28,7 @@ export default async function PrisonerPage({
         columns={9}
         display="flex"
         flexDirection="column"
-        height="100%"
+        height={{ xs: 'auto', md: '100%' }}
         container
       >
         <Grid2
@@ -36,17 +36,25 @@ export default async function PrisonerPage({
           flex={1}
           flexDirection="column"
           gap={4}
-          height="100%"
+          height={{ xs: 'auto', md: '100%' }}
           size={9}
         >
           {prisoner && (
             <>
               <ProfileHead prisoner={prisoner} />
               <Grid2 flex={1} height={0} size={9} spacing={2} container>
-                <Grid2 display="flex" height="100%" size={3}>
+                <Grid2
+                  display="flex"
+                  height={{ xs: 'auto', md: '100%' }}
+                  size={3}
+                >
                   <ProfileInfo prisoner={prisoner} />
                 </Grid2>
-                <Grid2 display="flex" height="100%" size={5}>
+                <Grid2
+                  display="flex"
+                  height={{ xs: 'auto', md: '100%' }}
+                  size={5}
+                >
                   <Updates updates={updates} />
                 </Grid2>
               </Grid2>

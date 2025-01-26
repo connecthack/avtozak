@@ -14,7 +14,13 @@ export const Box: FC<PropsWithChildren<BoxProps>> = ({
   const classes = `rounded-2xl bg-white flex flex-col p-4 w-full ${fullHeight ? 'h-full' : ''}`;
 
   return (
-    <MUIBox className={classes} sx={{ boxShadow: 1 }} {...rest}>
+    <MUIBox
+      className={classes}
+      flex={1}
+      height={0}
+      sx={{ boxShadow: 1 }}
+      {...rest}
+    >
       {children}
     </MUIBox>
   );

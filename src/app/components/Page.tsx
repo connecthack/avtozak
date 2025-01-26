@@ -8,9 +8,19 @@ type PageProps = {
 };
 export const Page: FC<PropsWithChildren<PageProps>> = ({ children }) => {
   return (
-    <Box display="flex" gap={2} height="100vh" px={2} py={4} width="100%">
+    <Box
+      display="flex"
+      flexDirection={{ xs: 'column-reverse', md: 'row' }}
+      gap={2}
+      height={{ xs: 'auto', md: '100vh' }}
+      px={2}
+      py={4}
+      width="100%"
+    >
       <Navbar />
-      <Box flex={1}>{children}</Box>
+      <Box display="flex" flex={1} flexDirection="column">
+        {children}
+      </Box>
     </Box>
   );
 };

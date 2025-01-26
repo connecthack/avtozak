@@ -1,20 +1,13 @@
-'use client';
+import { Suggestions as SuggestionsWidget } from '@/app/components/Suggestions';
+import { Page } from '@/app/components/Page';
+import { getSuggestions } from '@/app/helpers/service';
 
-import { Box } from '../components/Box';
-import { Page } from '../components/Page';
+export default async function Suggestionsd() {
+  const suggestions = await getSuggestions();
 
-import { Grid2, Typography } from '@mui/material';
-
-export default function Suggestions() {
   return (
     <Page title="Предложения РФМ">
-      <Grid2 display="flex" flexDirection="column" gap={2}>
-        <Box>
-          <Typography fontWeight={600} variant="h5">
-            Предложения
-          </Typography>
-        </Box>
-      </Grid2>
+      <SuggestionsWidget suggestions={suggestions} />
     </Page>
   );
 }
