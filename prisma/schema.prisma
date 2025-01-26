@@ -16,6 +16,12 @@ model MonitoringCase {
   terrorist Boolean?
 }
 
+model Vector {
+  id         String  @id @default(cuid())
+  prisonerId String
+  vector     Float[]
+}
+
 model CourtCase {
   id             String          @id @default(cuid())
   region         Int
@@ -45,7 +51,7 @@ model ConnectedLink {
   courtCase CourtCase @relation(fields: [courtCaseId], references: [id])
 }
 
-model March {
+model Match {
   id          String @id @default(cuid())
   prisonerId  String
   source      String
