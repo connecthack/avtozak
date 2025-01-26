@@ -22,12 +22,12 @@ model CourtCase {
   instance       String
   courtName      String
   caseNumber     String          @unique
-  entryDate      DateTime
-  accusedInfo    String
+  entryDate      String?
+  accusedInfo    String?
   judgeName      String
-  resultDate     DateTime?
+  resultDate     String?
   decision       String?
-  endDate        DateTime?
+  endDate        String?
   consideredBy   String?
   cui            String
   linkMeta       String?
@@ -43,4 +43,12 @@ model ConnectedLink {
   linkText    String?
 
   courtCase CourtCase @relation(fields: [courtCaseId], references: [id])
+}
+
+model March {
+  id          String @id @default(cuid())
+  prisonerId  String
+  source      String
+  sourceId    String
+  probability Float
 }
