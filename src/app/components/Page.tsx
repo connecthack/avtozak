@@ -1,4 +1,4 @@
-import { Navbar } from './Navbar';
+import { Navbar } from '@/app/components/Navbar';
 
 import { Box } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';

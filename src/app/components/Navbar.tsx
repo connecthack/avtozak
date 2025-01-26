@@ -1,10 +1,10 @@
 'use client';
 
-import { AutorenewIcon } from './AutorenewIcon';
-import { Cell } from './Cell';
-import { CoatIcon } from './CoatIcon';
-import { CoatRenewIcon } from './CoatRenewIcon';
-import { HammerIcon } from './HammerIcon';
+import { AutorenewIcon } from '@/app/components/AutorenewIcon';
+import { CoatIcon } from '@/app/components/CoatIcon';
+import { CoatRenewIcon } from '@/app/components/CoatRenewIcon';
+import { HammerIcon } from '@/app/components/HammerIcon';
+import { Cell } from '@/app/components/Cell';
 
 import { Box } from '@mui/material';
 import Image from 'next/image';
