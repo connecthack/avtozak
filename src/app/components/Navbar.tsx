@@ -14,8 +14,8 @@ export const Navbar = () => {
 
   return (
     <Box
-      bgcolor="whitesmoke"
       bottom={0}
+      className="bg-whitesmoke"
       display="flex"
       flexDirection={{ xs: 'row', md: 'column' }}
       justifyContent={{ xs: 'space-around', md: 'space-between' }}

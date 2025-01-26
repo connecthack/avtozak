@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MonitoringCase {
+  id        String   @id @default(cuid())
+  ordinal   Int
+  name      String
+  birthdate String
+  location  String
+  terrorist Boolean?
+}
+
+model CourtCase {
+  id             String          @id @default(cuid())
+  region         Int
+  instance       String
+  courtName      String
+  caseNumber     String          @unique
+  entryDate      DateTime
+  accusedInfo    String
+  judgeName      String
+  resultDate     DateTime?
+  decision       String?
+  endDate        DateTime?
+  consideredBy   String?
+  cui            String
+  linkMeta       String?
+  linkText       String?
+  text           String?
+  connectedLinks ConnectedLink[]
+}
+
+model ConnectedLink {
+  id          String  @id @default(cuid())
+  courtCaseId String
+  linkMeta    String?
+  linkText    String?
+
+  courtCase CourtCase @relation(fields: [courtCaseId], references: [id])
+}

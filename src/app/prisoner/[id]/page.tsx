@@ -45,15 +45,17 @@ export default async function PrisonerPage({
               <Grid2 flex={1} height={0} size={9} spacing={2} container>
                 <Grid2
                   display="flex"
+                  flexDirection="column"
                   height={{ xs: 'auto', md: '100%' }}
-                  size={3}
+                  size={{ xs: 12, md: 4 }}
                 >
                   <ProfileInfo prisoner={prisoner} />
                 </Grid2>
                 <Grid2
                   display="flex"
+                  flexDirection="column"
                   height={{ xs: 'auto', md: '100%' }}
-                  size={5}
+                  size={{ xs: 12, md: 4 }}
                 >
                   <Updates updates={updates} />
                 </Grid2>
