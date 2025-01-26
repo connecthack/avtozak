@@ -2,6 +2,7 @@ import { Prisoner } from '@/app/apollo/hooks/usePrisoners';
 import { Box } from '@/app/components/Box';
 import { Chip } from '@/app/components/Chip';
 
+import { Box as MUIBox } from '@mui/material';
 import { Typography } from '@mui/material';
 import { FC } from 'react';
 
@@ -10,17 +11,16 @@ type ProfileInfoProps = {
 };
 export const ProfileInfo: FC<ProfileInfoProps> = async ({ prisoner }) => {
   return (
-    <Box display="flex" gap={2} scrollable>
+    <Box display="flex" gap={2}>
       <Typography fontWeight={600} variant="h5">
         Информация
       </Typography>
-      <div className="text-lightsteelblue">
-        <div>
-          <Typography display="inline" variant="caption">
-            {prisoner.description}
-          </Typography>
-        </div>
-        <hr className="my-4" />
+      <MUIBox
+        className="text-lightsteelblue overflow-y-auto"
+        display="flex"
+        flexDirection="column"
+        gap={2}
+      >
         <div>
           <Typography display="inline" variant="caption">
             ФИО:{' '}
@@ -49,12 +49,18 @@ export const ProfileInfo: FC<ProfileInfoProps> = async ({ prisoner }) => {
             </Typography>
           </div>
         )}
-      </div>
-      <div className="flex flex-wrap gap-1">
-        {prisoner.articles?.map((article, index) => (
-          <Chip key={index}>{article}</Chip>
-        ))}
-      </div>
+        <div className="flex flex-wrap gap-1">
+          {prisoner.articles?.map((article, index) => (
+            <Chip key={index}>{article}</Chip>
+          ))}
+        </div>
+        <hr />
+        <div>
+          <Typography display="inline" variant="caption">
+            {prisoner.description}
+          </Typography>
+        </div>
+      </MUIBox>
     </Box>
   );
 };

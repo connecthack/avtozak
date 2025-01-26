@@ -28,10 +28,10 @@ export default async function Home() {
             </Typography>
 
             <Grid2
+              className="overflow-y-auto"
               display="flex"
               flex={1}
               mt={2}
-              overflow="auto"
               spacing={2}
               container
             >

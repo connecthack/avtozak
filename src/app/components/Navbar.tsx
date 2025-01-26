@@ -43,8 +43,8 @@ export const Navbar = () => {
 
       <Image
         alt="image"
+        className="object-contain"
         height={39}
-        objectFit="contain"
         quality={100}
         src="/logo.png"
         width={36}

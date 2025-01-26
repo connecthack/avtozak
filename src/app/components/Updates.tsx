@@ -14,7 +14,12 @@ import { FC, PropsWithChildren } from 'react';
 
 const TableHeadCell: FC<PropsWithChildren> = ({ children }) => (
   <TableCell className="uppercase">
-    <Typography color="lightsteelblue" fontWeight={600} variant="caption">
+    <Typography
+      color="lightsteelblue"
+      fontSize={10}
+      fontWeight={600}
+      variant="caption"
+    >
       {children}
     </Typography>
   </TableCell>
@@ -25,11 +30,11 @@ type UpdateProps = {
 };
 export const Updates: FC<UpdateProps> = ({ updates }) => {
   return (
-    <Box display="flex" gap={2} scrollable>
+    <Box display="flex" gap={2}>
       <Typography fontWeight={600} variant="h5">
         Обновления
       </Typography>
-      <TableContainer>
+      <TableContainer className="overflow-y-auto">
         <Table>
           <TableHead>
             <TableRow>
