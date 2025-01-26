@@ -23,7 +23,7 @@ export default async function PrisonerPage({
   const updates = await getUpdates();
 
   return (
-    <Page>
+    <Page title={prisoner?.name ?? 'Страница политзаключенного'}>
       <Grid2
         columns={9}
         display="flex"
@@ -43,10 +43,10 @@ export default async function PrisonerPage({
             <>
               <ProfileHead prisoner={prisoner} />
               <Grid2 flex={1} height={0} size={9} spacing={2} container>
-                <Grid2 height="100%" size={3}>
+                <Grid2 display="flex" height="100%" size={3}>
                   <ProfileInfo prisoner={prisoner} />
                 </Grid2>
-                <Grid2 height="100%" size={5}>
+                <Grid2 display="flex" height="100%" size={5}>
                   <Updates updates={updates} />
                 </Grid2>
               </Grid2>

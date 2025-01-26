@@ -10,7 +10,7 @@ type ProfileInfoProps = {
 };
 export const ProfileInfo: FC<ProfileInfoProps> = async ({ prisoner }) => {
   return (
-    <Box display="flex" gap={2} fullHeight scrollable>
+    <Box display="flex" gap={2} scrollable>
       <Typography fontWeight={600} variant="h5">
         Информация
       </Typography>

@@ -7,8 +7,8 @@ import { Grid2, Typography } from '@mui/material';
 
 export default function Suggestions() {
   return (
-    <Page>
-      <Grid2 display="flex" flexDirection="column" gap={2} size={9}>
+    <Page title="Предложения РФМ">
+      <Grid2 display="flex" flexDirection="column" gap={2}>
         <Box>
           <Typography fontWeight={600} variant="h5">
             Предложения

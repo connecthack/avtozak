@@ -10,9 +10,9 @@ export default async function Home() {
   const updates = await getUpdates();
 
   return (
-    <Page>
+    <Page title="Главная">
       <Grid2 columns={9} display="flex" height="100%" spacing={2} container>
-        <Grid2 display="flex" flexDirection="column" gap={2} size={3}>
+        <Grid2 display="flex" flexDirection="column" gap={2} size={4}>
           <Updates updates={updates} />
           <Box>
             <Typography fontWeight={600} variant="h5">
@@ -21,11 +21,12 @@ export default async function Home() {
           </Box>
         </Grid2>
 
-        <Grid2 height="100%" size={6}>
+        <Grid2 height="100%" size={5}>
           <Box fullHeight>
             <Typography fontWeight={600} variant="h5">
               Карточки ПЗК
             </Typography>
+
             <Grid2
               display="flex"
               flex={1}

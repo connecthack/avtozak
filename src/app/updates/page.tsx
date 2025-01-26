@@ -6,7 +6,7 @@ export default async function Updates() {
   const updates = await getUpdates();
 
   return (
-    <Page>
+    <Page title="Обновление РФМ">
       <UpdatesWidget updates={updates} />
     </Page>
   );

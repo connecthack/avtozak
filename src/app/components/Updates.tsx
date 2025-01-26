@@ -25,12 +25,12 @@ type UpdateProps = {
 };
 export const Updates: FC<UpdateProps> = ({ updates }) => {
   return (
-    <Box display="flex" gap={2} fullHeight scrollable>
+    <Box display="flex" gap={2} scrollable>
       <Typography fontWeight={600} variant="h5">
         Обновления
       </Typography>
-      <TableContainer sx={{ maxHeight: 400 }}>
-        <Table sx={{ minWidth: 650 }}>
+      <TableContainer>
+        <Table>
           <TableHead>
             <TableRow>
               <TableHeadCell>Имя</TableHeadCell>
